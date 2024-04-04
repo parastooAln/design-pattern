@@ -1,13 +1,31 @@
-
+import { IIterator } from "./IItarator";
 export class BrowseHistory {
-    private _urls: Array<string> = [];
+    private urls: Array<string> = [];
     public pop = () => {
         this.urls.pop()
     }
-    public push = (value:string) => {
+    public push = (value: string) => {
         this.urls.push(value);
     }
-    public get urls(): Array<string> {
-        return this._urls;
+
+    public createIterator=()=>{
+        return new this.ArrayIterator(this);
+    }
+
+    public ArrayIterator = class implements IIterator<string>{
+        private history: BrowseHistory;
+        private index = 0;
+        public constructor(history: BrowseHistory) {
+            this.history = history
+        }
+        public next = () => {
+            this.index++;
+        };
+        public current = () => {
+            return this.history.urls[this.index];
+        };
+        public isDone = () => {
+            return this.history.urls.length  == this.index
+        };
     }
 }

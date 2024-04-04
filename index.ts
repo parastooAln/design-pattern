@@ -1,3 +1,6 @@
+import { IteratorMain } from './iterator/IteratorMain';
 import  {run} from './memento/index'
 
-run();
+IteratorMain()
+
+// run();
