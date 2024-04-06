@@ -13,6 +13,7 @@ const run = () => {
     console.log(editor.getContent());
     editor.setContent('c');
     history.push(editor.createState());
+    console.log(editor.getContent());
     editor.restore(history.pop());
     console.log(editor.getContent());
     // editor.restore(history.pop());

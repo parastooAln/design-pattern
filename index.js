@@ -1,5 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const IteratorMain_1 = require("./iterator/IteratorMain");
-(0, IteratorMain_1.IteratorMain)();
+const TemplateMain_1 = require("./template/TemplateMain");
+(0, TemplateMain_1.templateMain)();
 // run();
