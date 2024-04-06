@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const TemplateMain_1 = require("./template/TemplateMain");
-(0, TemplateMain_1.templateMain)();
+const ObserverMain_1 = require("./observer/ObserverMain");
+// templateMain()
+(0, ObserverMain_1.ObserverMain)();
 // run();
